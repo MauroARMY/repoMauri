@@ -22,7 +22,7 @@ int quarter(int change)
 {
     do
     {
-        value = change/25;
+        change/25
     } while (value>25);
 
     return value;

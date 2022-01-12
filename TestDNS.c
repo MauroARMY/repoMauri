@@ -41,7 +41,7 @@ while (true)
 
            
 
-            if(YN == 'y')
+            if(YN == NULL)
             {
             do
             { 
