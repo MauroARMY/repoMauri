@@ -7,18 +7,26 @@ char temp;
 
 int main(void)
 {
-    printf("\nMENÚ:\n1) string to lower case.\n2) string to upper case.\n3) sandwiched.\n4) change letter.\n5) system().\n  ");
+    printf("\nMENÚ:\n1) string to lower case.\n2) string to upper case.\n3) sandwiched.\n4) change letter.\n5) system().\n6) exit\n ");
 
     int menu = 0;
     char yn;
     do 
     {
-    menu = get_int("chose your number [1-5]: ");
+    menu = get_int("chose your number [1-6]: ");
+    if (menu ==6 )
+    {
+        break;
+    }
+    else
+    {
+        continue;
+    }
     } while (menu <1 || menu >5);
     
 
 
-    while (menu >0 && menu <6 )
+    while (menu >0 && menu <7 )
     {
         if (menu == 1 )
         {
@@ -130,9 +138,15 @@ int main(void)
             yn = get_char("do you want to do it again?");
             }while(yn == 'y');
         }
+        else if(menu == 6 )
+        {
+            break;
+        }
         
-        printf("\nMENÚ:\n1) string to lower case.\n2) string to upper case.\n3) sandwiched.\n4) change letter.\n5) system().\n  ");
-        menu = get_int("chose your number [1-5]: ");
+        printf("\nMENÚ:\n1) string to lower case.\n2) string to upper case.\n3) sandwiched.\n4) change letter.\n5) system().\n6) exit\n ");
+        menu = get_int("chose your number [1-6]: ");
+
+        
     }
 
 }
